@@ -2,6 +2,7 @@ import { act, fireEvent, render, screen } from './test-utils'
 
 import { Card } from '@/components/card/card'
 import { Footer } from '@/components/footer/footer'
+import { NewSiteBanner } from '@/components/newSiteBanner/newSiteBanner'
 import { SectionTitle } from '@/components/sectionTitle/sectionTitle'
 
 import { github } from '@/shared/links'
@@ -99,6 +100,41 @@ describe('Components', () => {
       render(<SectionTitle title="Section title" />)
 
       screen.getByText('Section title')
+    })
+  })
+
+  describe('NewSiteBanner', () => {
+    it('should render the new site banner component', () => {
+      render(<NewSiteBanner />)
+
+      screen.getByText('🚀 Novo portfólio disponível!')
+      screen.getByText(
+        'Visite meu novo site em ranimontagna.com com design renovado e novas funcionalidades.',
+      )
+      screen.getByText('Visitar novo site')
+    })
+
+    it('should open the new site when the button is clicked', () => {
+      vi.spyOn(window, 'open').mockImplementation(() => null)
+
+      render(<NewSiteBanner />)
+
+      act(() => {
+        fireEvent.click(screen.getByTestId('visit-new-site-button'))
+      })
+
+      expect(window.open).toHaveBeenCalledWith('https://ranimontagna.com', '_blank')
+    })
+
+    // close-banner-button
+    it('should close the banner when the close button is clicked', () => {
+      render(<NewSiteBanner />)
+
+      act(() => {
+        fireEvent.click(screen.getByTestId('close-banner-button'))
+      })
+
+      expect(screen.queryByText('🚀 Novo portfólio disponível!')).toBeNull()
     })
   })
 })

@@ -29,6 +29,7 @@ export function NewSiteBanner() {
             </span>
           </div>
           <button
+            data-testid="visit-new-site-button"
             onClick={handleVisitNewSite}
             className="bg-white/20 hover:bg-white/30 transition-colors duration-200 px-3 py-1 rounded-md text-sm font-medium flex items-center gap-2 whitespace-nowrap"
           >
@@ -38,6 +39,7 @@ export function NewSiteBanner() {
         </div>
 
         <button
+          data-testid="close-banner-button"
           onClick={() => setIsVisible(false)}
           className="ml-4 hover:bg-white/20 transition-colors duration-200 p-1 rounded-md"
           aria-label="Fechar aviso"
