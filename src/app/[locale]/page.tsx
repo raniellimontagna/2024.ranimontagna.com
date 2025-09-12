@@ -11,12 +11,14 @@ import {
   Repos,
 } from '@/containers'
 import { Footer } from '@/components/footer/footer'
+import { NewSiteBanner } from '@/components/newSiteBanner/newSiteBanner'
 import { AppProvider } from '@/contexts/app.context'
 
 export default function Index() {
   return (
     <AppProvider>
       <div className="snap-y snap-mandatory">
+        <NewSiteBanner />
         <Header />
 
         <section id="hero">
