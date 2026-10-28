@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl'
-import { useLocale } from 'next-intl'
 
 import { motion } from 'framer-motion'
 
@@ -9,18 +8,8 @@ import { useMediaQuery } from '@/hooks/useMediaQuery'
 import perfilFoto from '@/assets/others/photo_with_background.png'
 
 export function About() {
-  const locale = useLocale()
   const t = useTranslations('About')
   const isMobile = useMediaQuery('(max-width: 600px)')
-
-  function handleOpenCV() {
-    if (locale === 'pt') {
-      window.open('/cv_pt.pdf', '_blank')
-      return
-    }
-
-    window.open('/cv_en.pdf', '_blank')
-  }
 
   return (
     <div className="pb-16">
@@ -55,20 +44,6 @@ export function About() {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
           >
             <p className="text-sm md:text-md lg:text-lg text-justify">{t('description')}</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ y: isMobile ? 30 : 0, x: isMobile ? 0 : 100, opacity: 0 }}
-            transition={{ duration: 1.4 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
-          >
-            <button
-              className="px-6 py-2 border border-gray-500 rounded-full uppercase text-xs 
-                         tracking-widest text-gray-100 transition-all hover:border-accent hover:text-accent"
-              onClick={handleOpenCV}
-            >
-              {t('accessCV')}
-            </button>
           </motion.div>
         </div>
       </div>
