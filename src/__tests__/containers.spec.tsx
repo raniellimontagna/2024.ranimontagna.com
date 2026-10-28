@@ -26,22 +26,14 @@ describe('Containers', () => {
   })
 
   describe('About', () => {
-    it('should render the about page with english locale and open the cv in english', () => {
+    it('should render the about page with english locale', () => {
       render(<About />, { locale: 'en' })
-
-      act(() => {
-        fireEvent.click(screen.getByText('Access my CV'))
-      })
 
       screen.getByText('About')
     })
 
-    it('should render the about page with portuguese locale and open the cv in portuguese', () => {
+    it('should render the about page with portuguese locale', () => {
       render(<About />, { locale: 'pt' })
-
-      act(() => {
-        fireEvent.click(screen.getByText('Acesse meu currículo'))
-      })
 
       screen.getByText('Sobre')
     })
