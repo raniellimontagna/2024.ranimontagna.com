@@ -1,0 +1,6 @@
+2:I[2960,[],""]
+3:I[3172,[],""]
+4:I[7572,["160","static/chunks/app/not-found-1af700c6b78c0a3b.js"],"default"]
+0:["c_oP3svcLbenIx7kYLaZY",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","html",null,{"lang":"pt","children":[["$","head",null,{"children":["$","meta",null,{"httpEquiv":"refresh","content":"0; url=/pt/"}]}],["$","body",null,{"children":["$","a",null,{"href":"/pt/","children":"Ranielli Montagna"}]}]]}],null],null],null]},[[null,["$","$L2",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L4",null,{}],"notFoundStyles":[]}]],null],null],["$L5",null]]]]
+5:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","meta","2",{"name":"next-size-adjust"}]]
+1:null
